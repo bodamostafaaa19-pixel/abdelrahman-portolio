@@ -104,15 +104,25 @@ nav a:hover {
 }
 
 .hero-content {
-    width: min(1150px, 90%);
-    max-width: 1150px;
-    margin: 0 auto;
-
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
-
-    gap: 120px;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 80px;
     align-items: center;
+
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+.hero-card {
+    padding: 45px;
+
+    border: 1px solid #262626;
+    border-radius: 20px;
+
+    background: rgba(20, 20, 20, 0.6);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
 .small-title {
