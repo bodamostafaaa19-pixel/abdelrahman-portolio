@@ -147,3 +147,8 @@ const counterObserver = new IntersectionObserver(
 counters.forEach(counter => {
     counterObserver.observe(counter);
 });
+if (window.innerWidth > 768) {
+
+    // كود الـcustom cursor هنا
+
+}
