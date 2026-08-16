@@ -868,3 +868,245 @@ footer {
     }
 
 }
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* NAVBAR */
+
+    .nav-container {
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav {
+        top: 70px;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+    }
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .hero-content > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 13vw, 60px);
+        line-height: 0.98;
+        word-break: normal;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 15px;
+        line-height: 1.8;
+
+        overflow-wrap: break-word;
+    }
+
+    /* BUTTONS */
+
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+
+        padding: 15px 20px;
+    }
+
+    /* SOCIAL */
+
+    .social-links {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    /* HERO CARD */
+
+    .hero-card {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 25px 20px;
+
+        margin: 0;
+    }
+
+    .hero-image {
+        width: min(260px, 80vw);
+        height: min(260px, 80vw);
+
+        margin: 0 auto 10px;
+    }
+
+    .card-info {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .card-info strong {
+        text-align: right;
+    }
+
+    /* SECTIONS */
+
+    .section {
+        width: 100%;
+        padding: 80px 0;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat {
+        padding: 20px 15px;
+    }
+
+    .stat strong {
+        font-size: 25px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 25px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    /* TIMELINE */
+
+    .timeline-item {
+        padding-left: 35px;
+    }
+
+    /* EDUCATION */
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    /* FOOTER */
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* BACKGROUND */
+
+    .background-animation {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* MOUSE LIGHT */
+    /* نخليه أصغر على الموبايل لأن الماوس مش موجود أصلاً */
+
+    .cursor-light {
+        display: none;
+    }
+}
