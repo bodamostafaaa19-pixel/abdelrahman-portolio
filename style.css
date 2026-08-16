@@ -106,23 +106,9 @@ nav a:hover {
 .hero-content {
     display: grid;
     grid-template-columns: 1.4fr 0.8fr;
+
     gap: 80px;
     align-items: center;
-
-    width: min(1150px, 90%);
-    margin: auto;
-}
-
-.hero-card {
-    padding: 45px;
-
-    border: 1px solid #262626;
-    border-radius: 20px;
-
-    background: rgba(20, 20, 20, 0.6);
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
 .small-title {
@@ -214,11 +200,7 @@ nav a:hover {
 /* HERO CARD */
 
 .hero-card {
-    width: 100%;
-    max-width: 430px;
-    margin-left: auto;
-
-    padding: 35px;
+    padding: 45px 45px;
 
     border: 1px solid #262626;
     border-radius: 20px;
@@ -337,15 +319,21 @@ nav a:hover {
 
 .stat {
     padding: 30px;
+
     border: 1px solid #242424;
     border-radius: 12px;
+
     background: #101010;
-    transition: 0.3s ease;
 }
+
 .stat:hover {
-    border-color: #7c3aed;
+    padding: 30px;
+
+    border: 3px solid #701970;
+    border-radius: 12px;
+
+    background: #a197848a;
     box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);
-    background: #101010;
 }
 
 .stat strong {
@@ -723,25 +711,19 @@ footer {
         display: block;
     }
 
-   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
+    .hero-content {
+        grid-template-columns: 1fr;
 
-    width: 90%;
-    margin: auto;
-}
-
-.hero-card {
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
-}
+        gap: 50px;
+    }
 
     .hero {
         padding-top: 120px;
     }
 
- 
+    .hero-card {
+        max-width: 500px;
+    }
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -757,20 +739,22 @@ footer {
 
 }
 
-/* ================= CURSOR LIGHT ================= */
-
 .cursor-light {
     position: fixed;
+
     width: 150px;
     height: 150px;
 
     border-radius: 50%;
+
     background: rgba(124, 58, 237, 0.18);
 
     filter: blur(60px);
+
     pointer-events: none;
 
     transform: translate(-50%, -50%);
+
     z-index: 9999;
 
     transition:
@@ -778,20 +762,11 @@ footer {
         top 0.04s linear;
 }
 
-/* Disable mouse light on phones */
-@media (max-width: 768px) {
-    .cursor-light {
-        display: none !important;
-    }
-}
-/* ================= BACKGROUND ANIMATION ================= */
-
 .background-animation {
     position: fixed;
     inset: 0;
 
     overflow: hidden;
-    pointer-events: none;
 
     z-index: -1;
 
@@ -818,6 +793,8 @@ footer {
 .background-animation span:nth-child(1) {
     top: -150px;
     left: -100px;
+
+    animation-delay: 0s;
 }
 
 .background-animation span:nth-child(2) {
@@ -842,7 +819,7 @@ footer {
     }
 
     50% {
-        transform: translate(50px, -40px) scale(1.1);
+        transform: translate(80px, -60px) scale(1.15);
     }
 }
 
@@ -890,188 +867,4 @@ footer {
         gap: 15px;
     }
 
-}
-/* ================= MOBILE FIX ================= */
-
-html,
-body {
-    width: 90%;
-    max-width: 90%;
-    overflow-x: hidden;
-}
-
-* {
-    max-width: 90%;
-}
-
-.container {
-    width: 90%;
-    max-width: 100%;
-}
-
-@media (max-width: 850px) {
-
-    .hero-content {
-        width: 90%;
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .hero-card {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .hero {
-        padding-top: 120px;
-    }
-
-    /* باقي الكود بتاعك */
-
-
-.hero h1 {
-    font-size: clamp(42px, 13vw, 58px);
-    line-height: 1.05;
-    overflow-wrap: anywhere;
-}
-
-.hero h2 {
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-.hero-description {
-    width: 100%;
-    max-width: 100%;
-    font-size: 16px;
-    line-height: 1.8;
-    overflow-wrap: break-word;
-}
-
-.hero-buttons {
-    width: 100%;
-}
-
-.btn {
-    width: 100%;
-    text-align: center;
-}
-
-.hero-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 25px;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: min(300px, 100%);
-    height: min(300px, 100vw);
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
-}
-
-.social-links {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.about-grid,
-.skills-grid,
-.projects-grid,
-.contact-grid {
-    width: 100%;
-    min-width: 0;
-}
-
-.stat,
-.skill-card,
-.project-card,
-.contact-card,
-.education-card {
-    min-width: 0;
-    max-width: 100%;
-}
-
-@media (max-width: 600px) {
-
-    .navbar {
-        width: 100%;
-    }
-
-    .nav-container {
-        height: 65px;
-    }
-
-@media (max-width: 600px) {
-
-    .hero-content {
-        width: 90%;
-        gap: 50px;
-    }
-
-    .hero-card {
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-}
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .btn {
-        padding: 15px 20px;
-    }
-
-    .hero-card {
-        padding: 25px 20px;
-    }
-
-    .hero-image {
-        width: 250px;
-        height: 250px;
-    }
-
-    .section {
-        padding: 80px 0;
-    }
-
-    .section-title h2 {
-        font-size: 35px;
-    }
-
-    .skills-grid,
-    .projects-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-stats {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* Hide mouse light on phones */
-    .cursor-light {
-        display: none;
-    }
 }
