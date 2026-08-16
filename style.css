@@ -1,5 +1,5 @@
 * {
-    margin: 30px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -871,13 +871,13 @@ footer {
 
 html,
 body {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
     overflow-x: hidden;
 }
 
 * {
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .container {
