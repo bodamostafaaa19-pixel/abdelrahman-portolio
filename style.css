@@ -319,20 +319,16 @@ nav a:hover {
 
 .stat {
     padding: 30px;
-
     border: 1px solid #242424;
     border-radius: 12px;
-
     background: #101010;
+    transition: 0.3s ease;
 }
 .stat:hover {
-    padding: 30px;
-
-    border: 3px solid #701970;
-    border-radius: 12px;
-
-    background: #a197848a;
-    box-shadow:0 15px 40px rgba(124, 58, 237, 0.12);;
+    border-color: #7c3aed;
+    background: #151515;
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);
+    transform: translateY(-4px);
 }
 
 .stat strong {
@@ -738,33 +734,41 @@ footer {
 
 }
 
+/* ================= CURSOR LIGHT ================= */
+
 .cursor-light {
     position: fixed;
-
     width: 150px;
     height: 150px;
 
     border-radius: 50%;
-
     background: rgba(124, 58, 237, 0.18);
 
     filter: blur(60px);
-
     pointer-events: none;
 
     transform: translate(-50%, -50%);
-
     z-index: 9999;
 
     transition:
         left 0.04s linear,
         top 0.04s linear;
 }
+
+/* Disable mouse light on phones */
+@media (max-width: 768px) {
+    .cursor-light {
+        display: none !important;
+    }
+}
+/* ================= BACKGROUND ANIMATION ================= */
+
 .background-animation {
     position: fixed;
     inset: 0;
 
     overflow: hidden;
+    pointer-events: none;
 
     z-index: -1;
 
@@ -791,8 +795,6 @@ footer {
 .background-animation span:nth-child(1) {
     top: -150px;
     left: -100px;
-
-    animation-delay: 0s;
 }
 
 .background-animation span:nth-child(2) {
@@ -817,9 +819,10 @@ footer {
     }
 
     50% {
-        transform: translate(80px, -60px) scale(1.15);
+        transform: translate(50px, -40px) scale(1.1);
     }
 }
+
 @media (max-width: 600px) {
 
     .section {
@@ -865,106 +868,113 @@ footer {
     }
 
 }
-/* ===== MOBILE FIX ===== */
+/* ================= MOBILE FIX ================= */
 
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+@media (max-width: 600px) {
 
-body {
-    background: #080808;
-}
-
-/* Prevent sections from overflowing */
-section,
-header,
-main,
-footer {
-    max-width: 100%;
-    overflow: hidden;
-}
-
-/* Background glow */
-body::before {
-    content: "";
-    position: fixed;
-    width: 350px;
-    height: 350px;
-    top: 180px;
-    right: -180px;
-
-    background: #7c3aed;
-    opacity: 0.10;
-
-    filter: blur(120px);
-    border-radius: 50%;
-
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .container {
+    html,
+    body {
         width: 100%;
         max-width: 100%;
-        padding-left: 32px;
-        padding-right: 32px;
-        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
     }
 
     .hero {
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        width: 100%;
+        gap: 40px;
     }
 
     .hero h1 {
-        font-size: clamp(48px, 13vw, 80px);
+        font-size: clamp(45px, 14vw, 60px);
         line-height: 0.95;
-        word-break: normal;
     }
 
-    .hero p {
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-card {
+        width: 100%;
         max-width: 100%;
+        padding: 25px;
     }
 
-    .buttons {
+    .hero-image {
+        width: min(260px, 100%);
+        height: min(260px, 100%);
+        margin: 0 auto;
+    }
+
+    .card-info {
+        gap: 15px;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat {
+        padding: 20px;
+    }
+
+    .stat strong {
+        font-size: 25px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .project-card {
         width: 100%;
     }
 
-    .buttons a {
+    .education-card {
         width: 100%;
-        box-sizing: border-box;
+        padding: 25px;
+        align-items: flex-start;
     }
 
-    .social-links {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-}
-/* Custom cursor - Desktop only */
-@media (min-width: 769px) {
-    .cursor {
-        display: block;
-    }
-}
-
-/* Hide custom cursor on phones/tablets */
-@media (max-width: 768px) {
-    .cursor,
-    .cursor-dot {
-        display: none !important;
+    .section-title h2 {
+        font-size: 35px;
     }
 
-    html,
-    body,
-    a,
-    button {
-        cursor: auto !important;
+    .timeline-item {
+        padding-left: 35px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
     }
 }
