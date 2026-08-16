@@ -723,19 +723,25 @@ footer {
         display: block;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr;
+   .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
 
-        gap: 50px;
-    }
+    width: 90%;
+    margin: auto;
+}
+
+.hero-card {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
 
     .hero {
         padding-top: 120px;
     }
 
-    .hero-card {
-        max-width: 500px;
-    }
+ 
 
     .about-grid {
         grid-template-columns: 1fr;
