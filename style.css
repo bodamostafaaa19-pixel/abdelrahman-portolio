@@ -947,3 +947,24 @@ body::before {
         gap: 20px;
     }
 }
+/* Custom cursor - Desktop only */
+@media (min-width: 769px) {
+    .cursor {
+        display: block;
+    }
+}
+
+/* Hide custom cursor on phones/tablets */
+@media (max-width: 768px) {
+    .cursor,
+    .cursor-dot {
+        display: none !important;
+    }
+
+    html,
+    body,
+    a,
+    button {
+        cursor: auto !important;
+    }
+}
