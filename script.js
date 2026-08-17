@@ -152,3 +152,99 @@ if (window.innerWidth > 768) {
     // كود الـcustom cursor هنا
 
 }
+const caseStudies = {
+
+    case1: {
+        category: "MARKETING CAMPAIGN",
+        title: "Campaign Name",
+
+        role: "Marketing & Business Development",
+
+        objective: "Increase registrations and reach the target audience.",
+
+        work: "Campaign strategy, B2B outreach, social media promotion, audience targeting and campaign coordination.",
+
+        result: "500+ registrations and 20K+ reach."
+    },
+
+    case2: {
+        category: "EVENT MARKETING",
+        title: "Event Campaign",
+
+        role: "Marketing & Event Management",
+
+        objective: "Increase event attendance and awareness.",
+
+        work: "Offline marketing, partnership development, social media promotion and event coordination.",
+
+        result: "1,000+ participants."
+    },
+
+    case3: {
+        category: "B2B MARKETING",
+        title: "B2B Partnership Campaign",
+
+        role: "Business Development",
+
+        objective: "Build strategic partnerships and expand the campaign reach.",
+
+        work: "B2B outreach, negotiation, relationship building and partnership development.",
+
+        result: "Multiple strategic partnerships."
+    }
+
+};
+
+
+function openCaseStudy(caseId) {
+
+    const data = caseStudies[caseId];
+
+    if (!data) return;
+
+    document.getElementById("modalCategory").textContent =
+        data.category;
+
+    document.getElementById("modalTitle").textContent =
+        data.title;
+
+    document.getElementById("modalRole").textContent =
+        data.role;
+
+    document.getElementById("modalObjective").textContent =
+        data.objective;
+
+    document.getElementById("modalWork").textContent =
+        data.work;
+
+    document.getElementById("modalResult").textContent =
+        data.result;
+
+    document.getElementById("caseModal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeCaseStudy() {
+
+    document.getElementById("caseModal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* Close when clicking outside */
+
+document.getElementById("caseModal").addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+            closeCaseStudy();
+        }
+
+    }
+);
