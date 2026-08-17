@@ -156,28 +156,28 @@ const caseStudies = {
 
     case1: {
         category: "MARKETING CAMPAIGN",
-        title: "Campaign Name",
+        title: "Nawaah Educational Campaign",
 
-        role: "Marketing & Business Development",
+        role: "Founder & Business Development",
 
         objective: "Increase registrations and reach the target audience.",
 
-        work: "Campaign strategy, B2B outreach, social media promotion, audience targeting and campaign coordination.",
+        work: "B2B Partnership • Event Marketing • Lead Generation.",
 
-        result: "500+ registrations and 20K+ reach."
+        result: "150+ Attendees | 200 Leads | 50 Customers"
     },
 
     case2: {
         category: "EVENT MARKETING",
-        title: "Event Campaign",
+        title: "EVENT SPEAKER & INSTRUCTOR",
 
-        role: "Marketing & Event Management",
+        role: " SPEAKER & INSTRUCTOR",
 
-        objective: "Increase event attendance and awareness.",
+        objective: " Build a Personal brand.",
 
-        work: "Offline marketing, partnership development, social media promotion and event coordination.",
+        work: "Marketing Instructor | Improved students skills",
 
-        result: "1,000+ participants."
+        result: "1,000+ Attendees."
     },
 
     case3: {
