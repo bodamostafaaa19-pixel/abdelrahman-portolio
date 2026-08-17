@@ -158,7 +158,7 @@ const caseStudies = {
         category: "MARKETING CAMPAIGN",
         title: "Nawaah Educational Campaign",
 
-        role: "Founder & Business Development",
+        role: "Founder of Nawaah, Business Development, Partnership Management, Campaign Management",
 
         objective: "Increase registrations and reach the target audience.",
 
@@ -181,7 +181,7 @@ const caseStudies = {
     },
 
     case3: {
-        category: "B2B MARKETING",
+        category: "B2B Partnership",
         title: "Nawaah × Arab Training Center",
 
         role: "Business Development & Marketing",
