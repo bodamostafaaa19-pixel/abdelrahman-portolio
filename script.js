@@ -182,15 +182,15 @@ const caseStudies = {
 
     case3: {
         category: "B2B MARKETING",
-        title: "B2B Partnership Campaign",
+        title: "Nawaah × Arab Training Center",
 
-        role: "Business Development",
+        role: "Business Development & Marketing",
 
-        objective: "Build strategic partnerships and expand the campaign reach.",
+        objective: "Build a strategic B2B partnership to expand Nawaah’s operations and create mutual value for both teams.",
 
-        work: "B2B outreach, negotiation, relationship building and partnership development.",
+        work: " Established a B2B partnership between Nawaah and the Arab Training Center.Secured an official accreditation for Nawaah through the center.Integrated both teams to expand operational capabilities and reach.Created a mutually beneficial model: Nawaah benefited from the center’s facilities and resources, while the center benefited from our marketing capabilities and expertise.Coordinated knowledge and experience exchange between both teams.",
 
-        result: "Multiple strategic partnerships."
+        result: "Successful B2B partnership.Expanded operational capacity.Mutual exchange of knowledge and expertise.Shared resources and capabilities.Created value for both organizations"
     }
 
 };
