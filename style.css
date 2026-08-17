@@ -1422,3 +1422,164 @@ body {
     }
 
 }
+/* ================= MY WORK ================= */
+
+.work-section {
+    background: #080808;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.work-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 20px 60px rgba(124, 58, 237, 0.12);
+}
+
+
+/* IMAGE */
+
+.work-image {
+    width: 100%;
+    height: 260px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.work-card:hover .work-image img {
+    transform: scale(1.05);
+}
+
+
+/* CONTENT */
+
+.work-info {
+    padding: 30px;
+}
+
+.work-category {
+    color: #8b5cf6;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.work-info h3 {
+    font-size: 24px;
+
+    margin: 10px 0 22px;
+}
+
+
+/* CASE STUDY INFO */
+
+.case-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.case-info p {
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.case-info strong {
+    color: #ddd;
+}
+
+
+/* BUTTON */
+
+.case-btn {
+    margin-top: 25px;
+
+    padding: 11px 18px;
+
+    background: transparent;
+
+    border: 1px solid #333;
+    border-radius: 7px;
+
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.case-btn:hover {
+    background: #7c3aed;
+
+    border-color: #7c3aed;
+
+    transform: translateX(4px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-image {
+        height: 230px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .work-info {
+        padding: 22px;
+    }
+
+    .work-info h3 {
+        font-size: 21px;
+    }
+
+    .work-image {
+        height: 210px;
+    }
+
+}
